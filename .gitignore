@@ -1,0 +1,7 @@
+0_init_vars
+.terraform/*
+*.tfplan
+*.tfstate
+*.tfstate.backup
+terraform.tfstate.d/*
+inventory/*

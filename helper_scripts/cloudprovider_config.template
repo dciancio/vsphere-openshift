@@ -1,0 +1,10 @@
+# Cloud Provider config
+openshift_cloudprovider_kind=${cloudprovider}
+openshift_clusterid=${clusterid}
+openshift_cloudprovider_vsphere_username=${cloudprovider_username}
+openshift_cloudprovider_vsphere_password=${cloudprovider_password}
+openshift_cloudprovider_vsphere_host=${cloudprovider_server}
+openshift_cloudprovider_vsphere_datacenter=${cloudprovider_datacenter}
+openshift_cloudprovider_vsphere_cluster=${cloudprovider_cluster}
+openshift_cloudprovider_vsphere_datastore=${cloudprovider_datastore}
+

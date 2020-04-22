@@ -1,0 +1,60 @@
+export TF_CLI_ARGS="-parallelism=1"
+
+export NAMED_ZONE="<zone_file>"
+export HOST_SHORT=$(hostname -s)
+
+export TF_VAR_ocp_version="3.11"
+export TF_VAR_ocp_pkg_version="3.11.88"
+
+### SDN options: redhat/openshift-ovs-subnet, redhat/openshift-ovs-multitenant, redhat/openshift-ovs-networkpolicy
+export TF_VAR_sdn_type="redhat/openshift-ovs-multitenant"
+
+export TF_VAR_reguser="<RH_registry_serviceaccount_username>"
+export TF_VAR_regpass="<RH_registry_serviceaccount_token>"
+
+export TF_VAR_rhak="<RH_portal_org_activationkey>"
+export TF_VAR_rhorg="<RH_portal_org_id>"
+
+export TF_VAR_ssh_key='<ssh_pub_key>'
+
+export TF_VAR_cluster_id="ocp311"
+export TF_VAR_base_domain="lab.example.com"
+export TF_VAR_cloudprovider="vsphere"
+export TF_VAR_subdomain_prefix="apps"
+export TF_VAR_api_prefix="api"
+export TF_VAR_machine_nm="25"
+export TF_VAR_machine_gw="10.37.198.254"
+export TF_VAR_machine_dns="10.37.197.1"
+
+export TF_VAR_vsphere_server="vcsa.${TF_VAR_base_domain}"
+export TF_VAR_vsphere_user='administrator@vsphere.local'
+export TF_VAR_vsphere_password=''
+export TF_VAR_vsphere_datacenter=""
+export TF_VAR_vsphere_cluster=""
+export TF_VAR_vsphere_datastore=""
+export TF_VAR_vm_template=""
+export TF_VAR_vm_network=""
+
+export TF_VAR_bastion_prefix="bastion"
+export TF_VAR_bastion_count=1
+export TF_VAR_bastion_ip='10.37.198.140'
+export TF_VAR_master_prefix="master"
+export TF_VAR_master_count=3
+export TF_VAR_master_ips='["10.37.198.141", "10.37.198.142", "10.37.198.143"]'
+export TF_VAR_worker_prefix="worker"
+export TF_VAR_worker_count=3
+export TF_VAR_worker_ips='["10.37.198.144", "10.37.198.145", "10.37.198.146"]'
+export TF_VAR_infra_prefix="infra"
+export TF_VAR_infra_count=3
+export TF_VAR_infra_ips='["10.37.198.147", "10.37.198.148", "10.37.198.149"]'
+
+export TF_VAR_cacertexpiry=9999          # default = 1825
+export TF_VAR_certexpiry=9999            # default = 730
+export TF_VAR_use_customcerts=false
+export TF_VAR_mastercert='{certfile="",keyfile="",names="${TF_VAR_api_prefix}.${TF_VAR_base_domain}",cafile=""}'
+export TF_VAR_routercert='{certfile="",keyfile="",cafile=""}'
+export TF_VAR_install_metrics=true
+export TF_VAR_install_monitoring=true
+export TF_VAR_install_logging=true
+export TF_VAR_use_pv_registry=true
+
