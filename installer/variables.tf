@@ -92,6 +92,26 @@ variable "bastion_ip" {
   description = "Bastion IP"
 }
 
+variable "bastion_cpu" {
+  type        = string
+  description = "Bastion CPU"
+}
+
+variable "bastion_mem" {
+  type        = string
+  description = "Bastion memory"
+}
+
+variable "bastion_disk0" {
+  type        = string
+  description = "Bastion disk0"
+}
+
+variable "bastion_disk1" {
+  type        = string
+  description = "Bastion disk1"
+}
+
 variable "master_count" {
   description = "Master count"
 }
@@ -104,6 +124,26 @@ variable "master_prefix" {
 variable "master_ips" {
   type        = list
   description = "Master IPs"
+}
+
+variable "master_cpu" {
+  type        = string
+  description = "Master CPU"
+}
+
+variable "master_mem" {
+  type        = string
+  description = "Master memory"
+}
+
+variable "master_disk0" {
+  type        = string
+  description = "Master disk0"
+}
+
+variable "master_disk1" {
+  type        = string
+  description = "Master disk1"
 }
 
 variable "worker_count" {
@@ -120,6 +160,26 @@ variable "worker_ips" {
   description = "Worker IPs"
 }
 
+variable "worker_cpu" {
+  type        = string
+  description = "Worker CPU"
+}
+
+variable "worker_mem" {
+  type        = string
+  description = "Worker memory"
+}
+
+variable "worker_disk0" {
+  type        = string
+  description = "Worker disk0"
+}
+
+variable "worker_disk1" {
+  type        = string
+  description = "Worker disk1"
+}
+
 variable "infra_count" {
   description = "Infra count"
 }
@@ -132,6 +192,26 @@ variable "infra_prefix" {
 variable "infra_ips" {
   type        = list
   description = "Infra IPs"
+}
+
+variable "infra_cpu" {
+  type        = string
+  description = "Infra CPU"
+}
+
+variable "infra_mem" {
+  type        = string
+  description = "Infra memory"
+}
+
+variable "infra_disk0" {
+  type        = string
+  description = "Infra disk0"
+}
+
+variable "infra_disk1" {
+  type        = string
+  description = "Infra disk1"
 }
 
 variable "cacertexpiry" {

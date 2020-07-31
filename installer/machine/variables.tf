@@ -50,7 +50,19 @@ variable "dns" {
   type = string
 }
 
+variable "disk0" {
+  type = string
+}
+
+variable "disk1" {
+  type = string
+}
+
 variable "memory" {
+  type = string
+}
+
+variable "cpu" {
   type = string
 }
 

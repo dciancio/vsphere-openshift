@@ -5,3 +5,4 @@
 *.tfstate.backup
 terraform.tfstate.d/*
 inventory/*
+ddcocp*/

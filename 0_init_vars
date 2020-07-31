@@ -1,4 +1,4 @@
-export NAMED_ZONE="<zone_file>"
+export NAMED_ZONE="tamlab.brq.db"
 export HOST_SHORT=$(hostname -s)
 
 export TF_VAR_ocp_version="3.11"
@@ -7,16 +7,16 @@ export TF_VAR_ocp_pkg_version="3.11.88"
 ### SDN options: redhat/openshift-ovs-subnet, redhat/openshift-ovs-multitenant, redhat/openshift-ovs-networkpolicy
 export TF_VAR_sdn_type="redhat/openshift-ovs-multitenant"
 
-export TF_VAR_reguser="<RH_registry_serviceaccount_username>"
-export TF_VAR_regpass="<RH_registry_serviceaccount_token>"
+export TF_VAR_reguser="1979710|ddelcian"
+export TF_VAR_regpass="eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiI4OTFmMWZhNWNlNGU0MDU3YjAzY2ExYTNkYzBhNzNjMCJ9.klhsAF11fkAVmJlyzuba9NrJnNAFVWdJN0PZczQdFBxXFDJBwnPkKJyE0yzOpu89j6cjSGrvfXwXBiFSu5pTSC6qoJcw2STNZMPNpOlcaCp5hu0jHN8Zl_sy2mcfW0yYcomRnbI48fNHKm4FiUmQ5z2OeEDfZqiAQ16g8adrEiDQDkY1IPb3MWGrGrL8S39oIefmDxmOCpmNeE7nA6LiaJit7SDCekhkmqFqkplAUJSIL3tGkbmvA0u57I84Ht8s_JMjNcQW9NDxVb4tMuGiSuEJQX4UMxzrFwcgsEQDgFkkt9EkEnPgRAw2TQ8vV-Czhx1HQ1pwakHaRSoIxSbX87M-WKr0hYrazpJSZ9o-VMLWxUGLQqFEEU6BCwM0Hf9eh99dwL21TEJTeyl8PRfueyGUy3o3v2oCnpixcUM11M1i6tIdnc0JFfGzVuVgBmk4TO-1jNzMRs2Z3zklyBRuhFS1jC2vEKEtChRUPOnH1Rl7dpSnU9gc7nwnE2S1zCe-XHbOtFRmlfixPT7rqY0rNpALD4bek-xUB3atyN6hl6KTARyqarTRFlE3h4oTYfDHa1d8bcFzCjnKRbvyG5UeFVTB4KmX1yug7eD4oEtTAiuTboP_yosQTwhCCq3LPItrAhEiBIRKk3-_o1vokvj0wHRomszf5Mt0Fu2M_B85Dmo"
 
-export TF_VAR_rhak="<RH_portal_org_activationkey>"
-export TF_VAR_rhorg="<RH_portal_org_id>"
+export TF_VAR_rhak="rhn-support-ddelcian"
+export TF_VAR_rhorg="1979710"
 
-export TF_VAR_ssh_key='<ssh_pub_key>'
+export TF_VAR_ssh_key='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKdeuN2Jxol+C73PQzGMmBg5zJKS15O22p+Lka12deKXPyC5YFcBm4OoJPpQS6reE/XdI4vbYaB6M7+O3/vPwGS4pvXoAiSDyMjN9oU2fhxrHB4ssLf5iUE6wqX01FTfDJnOUzO5hd1yBMt2oT9sY6yzl6Zz68e8Q1L2ZqRw2DVTBHYDioSDxoYxPKxdrfYnPsSKnpoUfV6MwY+0Kx/Y7AyQDEyysPB9ZOgtqJRNS89WiAGPuS+NvcP+JolSdvceTWL+Xp49kWbnsmlvSIBruqt0qVjkuaZmDcvhPaqJ6ck/W3HWy5fxKAeSNhKazMggmI9lKZcrZyF2sqpSPWywwh ddelcian@rh0017450.localdomain'
 
-export TF_VAR_cluster_id="ocp311"
-export TF_VAR_base_domain="lab.example.com"
+export TF_VAR_cluster_id="ddcocp311"
+export TF_VAR_base_domain="tamlab.brq.redhat.com"
 export TF_VAR_cloudprovider="vsphere"
 export TF_VAR_subdomain_prefix="apps"
 export TF_VAR_api_prefix="api"
@@ -26,12 +26,12 @@ export TF_VAR_machine_dns="10.37.197.1"
 
 export TF_VAR_vsphere_server="vcsa.${TF_VAR_base_domain}"
 export TF_VAR_vsphere_user='administrator@vsphere.local'
-export TF_VAR_vsphere_password=''
-export TF_VAR_vsphere_datacenter=""
-export TF_VAR_vsphere_cluster=""
-export TF_VAR_vsphere_datastore=""
-export TF_VAR_vm_template=""
-export TF_VAR_vm_network=""
+export TF_VAR_vsphere_password='Redhat123!'
+export TF_VAR_vsphere_datacenter="Datacenter"
+export TF_VAR_vsphere_cluster="tamlab"
+export TF_VAR_vsphere_datastore="datastore2"
+export TF_VAR_vm_template="rhel77u1"
+export TF_VAR_vm_network="TAMLAB_298"
 
 export TF_VAR_bastion_prefix="bastion"
 export TF_VAR_bastion_count=1

@@ -19,7 +19,7 @@ resource "vsphere_virtual_machine" "vm" {
   name             = "${var.name}-${count.index}"
   resource_pool_id = var.resource_pool_id
   datastore_id     = data.vsphere_datastore.datastore.id
-  num_cpus         = "4"
+  num_cpus         = var.cpu
   memory           = var.memory
   guest_id         = data.vsphere_virtual_machine.template.guest_id
   folder           = var.folder
@@ -34,13 +34,13 @@ resource "vsphere_virtual_machine" "vm" {
 
   disk {
     label            = "disk0"
-    size             = 20
+    size             = var.disk0
     thin_provisioned = data.vsphere_virtual_machine.template.disks.0.thin_provisioned
   }
 
   disk {
     label            = "disk1"
-    size             = 50
+    size             = var.disk1
     unit_number      = 1
     thin_provisioned = data.vsphere_virtual_machine.template.disks.1.thin_provisioned
   }

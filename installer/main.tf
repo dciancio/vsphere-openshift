@@ -40,7 +40,10 @@ module "bastion" {
   netmask          = "${var.machine_nm}"
   gateway          = "${var.machine_gw}"
   dns              = "${var.machine_dns}"
-  memory           = "8192"
+  disk0            = "${var.bastion_disk0}"
+  disk1            = "${var.bastion_disk1}"
+  memory           = "${var.bastion_mem}"
+  cpu              = "${var.bastion_cpu}"
   userdata         = "${data.template_cloudinit_config.sysprep-bastion.rendered}"
 }
 
@@ -60,7 +63,10 @@ module "master" {
   netmask          = "${var.machine_nm}"
   gateway          = "${var.machine_gw}"
   dns              = "${var.machine_dns}"
-  memory           = "16384"
+  disk0            = "${var.master_disk0}"
+  disk1            = "${var.master_disk1}"
+  memory           = "${var.master_mem}"
+  cpu              = "${var.master_cpu}"
   userdata         = "${data.template_cloudinit_config.sysprep-openshift.rendered}"
 }
 
@@ -80,7 +86,10 @@ module "worker" {
   netmask          = "${var.machine_nm}"
   gateway          = "${var.machine_gw}"
   dns              = "${var.machine_dns}"
-  memory           = "8192"
+  disk0            = "${var.worker_disk0}"
+  disk1            = "${var.worker_disk1}"
+  memory           = "${var.worker_mem}"
+  cpu              = "${var.worker_cpu}"
   userdata         = "${data.template_cloudinit_config.sysprep-openshift.rendered}"
 }
 
@@ -100,7 +109,10 @@ module "infra" {
   netmask          = "${var.machine_nm}"
   gateway          = "${var.machine_gw}"
   dns              = "${var.machine_dns}"
-  memory           = "12288"
+  disk0            = "${var.infra_disk0}"
+  disk1            = "${var.infra_disk1}"
+  memory           = "${var.infra_mem}"
+  cpu              = "${var.infra_cpu}"
   userdata         = "${data.template_cloudinit_config.sysprep-openshift.rendered}"
 }
 
